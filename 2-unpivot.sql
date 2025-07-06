@@ -44,6 +44,8 @@ El valor (cantidad de turistas)
 
 USE  mi_base;  
 
+CREATE TABLE mi_base.turismo_unpivot AS      -- creo una nueva tabala donde se va a guardar la consulta 
+(
 SELECT
   indice_tiempo AS fecha,
   'emisivo' AS flujo,
@@ -220,4 +222,5 @@ SELECT indice_tiempo, 'balanza','fluvial_maritima','resto_de_america', balanza_f
 UNION ALL
 SELECT indice_tiempo, 'balanza','fluvial_maritima','resto_del_mundo', balanza_fluvial_maritima_resto_del_mundo FROM turismo
 UNION ALL
-SELECT indice_tiempo, 'balanza','fluvial_maritima','uruguay', balanza_fluvial_maritima_uruguay FROM turismo;
+SELECT indice_tiempo, 'balanza','fluvial_maritima','uruguay', balanza_fluvial_maritima_uruguay FROM turismo
+);
